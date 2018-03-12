@@ -14,7 +14,7 @@ Caso queira testar as API's criadas no projeto, primeiro baixe o [Postman](https
 Depois de realizar o download do Postman, basta agora realizar os passos abaiaxo para 
 poder testar cada API criada!
 
-Se preferir, basta baixar este aquivo [aqui](Solar API Rest.postman_collection.json) e importe o mesmo no Postman para já obter todas as chamadas criadas.
+Se preferir, basta baixar este aquivo [aqui](https://github.com/juliosalina/orbita_apirest/blob/master/Solar_API_Rest.postman_collection.json) e importe o mesmo no Postman para já obter todas as chamadas criadas.
 
   ROTA                          |     HTTP(Verbo)   |      Descrição                           | 
 --------------------------------| ----------------- | -----------------------------------------| 
@@ -24,14 +24,13 @@ Se preferir, basta baixar este aquivo [aqui](Solar API Rest.postman_collection.j
 /api/v1/users/authenticate      |       POST        | Autêntica um usuário (Nome & Password)   | 
 /api/v1/users/:userId           |       PUT         | Atualiza um usuário pelo ID              | 
 /api/v1/users/:userId           |       DELETE      | Deleta um usuário pelo ID                | 
-
-As API`s abaixo necessitam de um Token gerado pela API /api/v1/users/authenticate
-
 /api/v1/solar                   |       GET         | Lista todos os dados                     |
 /api/v1/solar/:solarId          |       GET         | Lista um dado pelo ID                    | 
 /api/v1/solar                   |       POST        | Cria um novo dado                        | 
 /api/v1/solar/:solarId          |       PUT         | Atualiza um dado pelo ID                 | 
 /api/v1/solar/:solarId          |       DELETE      | Deleta um dado pelo ID                   | 
+
+Para testar as API`s em sua totalidade, crie um usuário através da API '/api/v1/users'método POST, posteriormente autentique esse usuário com a API '/api/v1/users/authenticate' método POST e ai terá um TOKEN válido para acesso total das API`s '/api/v1/solar'.
 
 ## Executar Localmente
 
