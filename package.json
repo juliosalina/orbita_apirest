@@ -1,0 +1,23 @@
+{
+  "name": "teste_backend_orbita",
+  "version": "1.0.0",
+  "description": "Backend Programming challenge - API Rest With Node.Js + MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Julio Henrique Salina <juliohsalina@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.0.9",
+    "morgan": "^1.9.0"
+  }
+}

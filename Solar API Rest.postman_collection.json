@@ -1,0 +1,638 @@
+{
+	"info": {
+		"name": "Solar API Rest",
+		"_postman_id": "fc119976-77d0-51f2-5063-4cd2c4905e91",
+		"description": "Teste Back-end Orbita - Solar API Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users - GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				},
+				"description": "Get all users on DB"
+			},
+			"response": []
+		},
+		{
+			"name": "Users - GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/{COLOQUE AQUI O ID}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"{COLOQUE AQUI O ID}"
+					]
+				},
+				"description": "Get user by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Users - POST | Create New User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Julio",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "juliohsalina@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "salina123",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "CA",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				},
+				"description": "Create New User"
+			},
+			"response": []
+		},
+		{
+			"name": "Users - POST | Authenticate User by Name & Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "{COLOQUE AQUI O NOME DE UM USUÁRIO CRIADO}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{COLOQUE AQUI A SENHA DE UM USUÁRIO CRIADO}",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"authenticate"
+					]
+				},
+				"description": "Authenticate User by Name & Password"
+			},
+			"response": []
+		},
+		{
+			"name": "Users - PUT - Update user by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Julio",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "juliohsalina@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "salina1233333454545",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "CA",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/{COLOQUE AQUI O ID}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"{COLOQUE AQUI O ID}"
+					]
+				},
+				"description": "Update user by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Users - DELETE | Delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/{COLOQUE AQUI O ID}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"{COLOQUE AQUI O ID}"
+					]
+				},
+				"description": "Delete user by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Solar - GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "x-access-token",
+						"value": "{COLOQUE AQUI O TOKEN GERADO PELA API DE AUTENTICAÇÃO}"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "DataProvider",
+							"value": "API REST NODE",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "InstallationDate",
+							"value": "15/02/2018",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "SystemSize",
+							"value": "400",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ZipCode",
+							"value": "03123020",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "State",
+							"value": "SP",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Cost",
+							"value": "400.25",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "julio Salinabbbb",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "juliohsalina@gmail.com",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "salinajulio",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "SP",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "admin",
+							"value": "true",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/solar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"solar"
+					]
+				},
+				"description": "GET ALL SOLAR DATA WITH HEADER TOKEN"
+			},
+			"response": []
+		},
+		{
+			"name": "Solar - GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "x-access-token",
+						"value": "{COLOQUE AQUI O TOKEN GERADO PELA API DE AUTENTICAÇÃO}"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "DataProvider",
+							"value": "API REST NODE",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "InstallationDate",
+							"value": "15/02/2018",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "SystemSize",
+							"value": "400",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "ZipCode",
+							"value": "03123020",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "State",
+							"value": "SP",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Cost",
+							"value": "400.25",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "julio Salinabbbb",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "juliohsalina@gmail.com",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "salinajulio",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "SP",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "admin",
+							"value": "true",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/solar/{COLOQUE AQUI O ID}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"solar",
+						"{COLOQUE AQUI O ID}"
+					]
+				},
+				"description": "GET SOLAR DATA WITH HEADER TOKEN BY ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Solar - POST | Create New Solar Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "x-access-token",
+						"value": "{COLOQUE AQUI O TOKEN GERADO PELA API DE AUTENTICAÇÃO}"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "DataProvider",
+							"value": "API REST NODE 2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "InstallationDate",
+							"value": "15/02/2018",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "SystemSize",
+							"value": "800",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ZipCode",
+							"value": "03123020",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "State",
+							"value": "MG",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Cost",
+							"value": "1000.25",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/solar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"solar"
+					]
+				},
+				"description": "Create New Solar Data with Token"
+			},
+			"response": []
+		},
+		{
+			"name": "Solar - PUT | Update Solar Data by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "x-access-token",
+						"value": "{COLOQUE AQUI O TOKEN GERADO PELA API DE AUTENTICAÇÃO}"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Data Provider",
+							"value": "API REST NODE",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Installation Date",
+							"value": "15/02/2018",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "System Size",
+							"value": "400",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Zip Code",
+							"value": "03123020",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "State",
+							"value": "SP",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Cost",
+							"value": "400.25",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/solar/{COLOQUE AQUI O ID}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"solar",
+						"{COLOQUE AQUI O ID}"
+					]
+				},
+				"description": "Update Solar Data With Token by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Users - DELETE | Delete user by id copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{COLOQUE AQUI O TOKEN GERADO PELA API DE AUTENTICAÇÃO}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/solar/{COLOQUE AQUI O ID}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"solar",
+						"{COLOQUE AQUI O ID}"
+					]
+				},
+				"description": "Delete user by id"
+			},
+			"response": []
+		}
+	]
+}

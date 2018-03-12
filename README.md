@@ -1,0 +1,91 @@
+# Teste BackEnd Orbita - API REST Solar
+
+## Recursos utilizados no desenvolvimento:
+
+- NodeJs;
+- Express.Js ~ v.4.0;
+- MongoDB;
+- Mongoose ~4.x;
+- NPM;
+
+## Testando a Aplicação no Postman:
+
+Caso queira testar as API's criadas no projeto, primeiro baixe o [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop).
+Depois de realizar o download do Postman, basta agora realizar os passos abaiaxo para 
+poder testar cada API criada!
+
+Se preferir, basta baixar este aquivo [aqui](Solar API Rest.postman_collection.json) e importe o mesmo no Postman para já obter todas as chamadas criadas.
+
+  ROTA                          |     HTTP(Verbo)   |      Descrição                           | 
+--------------------------------| ----------------- | -----------------------------------------| 
+/api/v1/users                   |       GET         | Lista todos os usuários                  |
+/api/v1/users/:userId           |       GET         | Lista um usuário pelo ID                 | 
+/api/v1/users                   |       POST        | Cria um novo usuário                     | 
+/api/v1/users/authenticate      |       POST        | Autêntica um usuário (Nome & Password)   | 
+/api/v1/users/:userId           |       PUT         | Atualiza um usuário pelo ID              | 
+/api/v1/users/:userId           |       DELETE      | Deleta um usuário pelo ID                | 
+
+As API`s abaixo necessitam de um Token gerado pela API /api/v1/users/authenticate
+
+/api/v1/solar                   |       GET         | Lista todos os dados                     |
+/api/v1/solar/:solarId          |       GET         | Lista um dado pelo ID                    | 
+/api/v1/solar                   |       POST        | Cria um novo dado                        | 
+/api/v1/solar/:solarId          |       PUT         | Atualiza um dado pelo ID                 | 
+/api/v1/solar/:solarId          |       DELETE      | Deleta um dado pelo ID                   | 
+
+## Executar Localmente
+
+Caso você deseja executar o projeto na sua máquina local, basta seguir os passos abaixo:
+
+Você deve simplesmente clonar o repositório do projeto na sua máquina e instalar as dependências.
+
+### Pre-Requisitos
+
+Antes de instalar as dependências no projeto, você precisa já ter instalado na sua máquina:
+
+* **NodeJs**: Caso não tenha, basta realizar o download [Aqui](https://nodejs.org/en/)
+* **MongoDB**: Caso não tenha, basta realizar o download [Aqui](https://docs.mongodb.com/manual/installation/)
+
+### Instalando as Dependências
+
+Abre o terminal e digite a path onde clonou o repositório do projeto:
+
+```
+cd "C:\Users\NomeDoComputador\Documents\..."
+```
+
+Quando estiver na pasta do projeto (raiz), basta digitar no terminal a seguinte instrução:
+
+```
+npm install
+```
+
+Esse comando irá criar uma nova pasta em seu projeto, como descrito abaixo:
+
+* `node_modules` - que contêm os packages do npm que precisará para o projeto.
+
+### Executando a Aplicação
+
+Primeiramente, vamos rodar o MongoDB! No terminal onde está aberto o projeto (raiz), basta rodar o seguinte comando:
+
+```
+mongod
+```
+
+Isso iniciará o seu servidor MongoDB, assim o nosso server poderá se conectar a instância do MongoDB.
+
+Bom, agora abra um novo terminal onde está aberto o projeto (raiz), e vamos importar o arquivo solar_data.json no seu MongoDB local, rodando o seguinte comando:
+
+```
+mongoimport --db SolarDB --collection solars --file solar_data.json --jsonArray
+```
+
+Agora abra novamente um novo terminal onde está aberto o projeto (raiz), e vamos iniciar o server para o projeto ser executado localmente, com o seguinte comando:
+
+```
+nodemon server.js
+```
+
+Agora, abra a página da aplicação em `http://localhost:3000/`. E pronto a aplicação será executada de maneira local na sua máquina.
+
+Que a força esteja com você! :)
