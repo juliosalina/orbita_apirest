@@ -1,4 +1,4 @@
-# Teste BackEnd Orbita - API REST Solar
+# Orbita - API REST Solar
 
 ## Recursos utilizados no desenvolvimento:
 
