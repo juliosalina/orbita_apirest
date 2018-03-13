@@ -30,7 +30,11 @@ Se preferir, basta baixar este aquivo [aqui](https://github.com/juliosalina/orbi
 /api/v1/solar/:solarId          |       PUT         | Atualiza um dado pelo ID                 | 
 /api/v1/solar/:solarId          |       DELETE      | Deleta um dado pelo ID                   | 
 
-Para testar as APIs em sua totalidade, crie um usuário através da API '/api/v1/users' método POST, posteriormente autentique esse usuário com a API '/api/v1/users/authenticate' método POST e ai terá um TOKEN válido para acesso total das APIs '/api/v1/solar'.
+## Informação importante
+
+Para testar as APIs em sua totalidade, crie um usuário através da API '/api/v1/users' método POST, posteriormente autentique esse usuário com a API '/api/v1/users/authenticate' método POST, isso lhe retornará um TOKEN válido para acesso total das APIs '/api/v1/solar'. 
+
+Em cada TOKEN é salvo o nome do usuário, bem como o estado (SP, RJ...) do seu cadastro, isso fará com que ao realizar uma busca pela API '/api/v1/solar', os resultados sejam apenas do mesmo estado do cadastro do usuário, limitados em 20 itens por busca para teste.
 
 ## Executar Localmente
 
