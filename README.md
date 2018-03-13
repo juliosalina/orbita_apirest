@@ -36,6 +36,10 @@ Para testar as APIs em sua totalidade, crie um usuário através da API '/api/v1
 
 Em cada TOKEN é salvo o nome do usuário, bem como o estado (SP, RJ...) do seu cadastro, isso fará com que ao realizar uma busca pela API '/api/v1/solar', os resultados sejam apenas do mesmo estado do cadastro do usuário, limitados em 20 itens por busca para teste.
 
+## Testes Unitários
+
+Recomendo utilizar o [MochaJs](https://mochajs.org/) para realizar os teste unitários da API, pretendo fazer um update nesse projeto em breve com os testes de todas as rotas.
+
 ## Executar Localmente
 
 Caso você deseja executar o projeto na sua máquina local, basta seguir os passos abaixo:
