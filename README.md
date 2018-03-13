@@ -40,7 +40,7 @@ Em cada TOKEN é salvo o nome do usuário, bem como o estado (CA...) do seu cada
 
 ## Testes Unitários
 
-Recomendo utilizar o [MochaJs](https://mochajs.org/) para realizar os teste unitários da API, pretendo fazer um update nesse projeto em breve com os testes de todas as rotas.
+Recomendo utilizar o [MochaJs](https://mochajs.org/) para realizar os testes unitários da API, pretendo fazer um update nesse projeto em breve com os testes de todas as rotas.
 
 ## Executar Localmente
 
